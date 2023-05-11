@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <a href="index.html">
+    <button id="homePageButton">HOME</button>
+  </a>
+  <body id="weatherBody">
+    <div id="header">
+      <h2>Search weather by city</h2>
+    </div>
+    <div id="inputField">
+      <input id="searchBox" type="text" placeholder="enter city here" />
+      <button id="searchButton">Search</button>
+      <input type="checkbox" id="celcius" value="metric" />
+      <label for="celcius"> Celcius </label>
+      <input type="checkbox" id="fahrenheit" value="imperial" />
+      <label for="fahrenheit"> Fahrenheit </label>
+    </div>
+    <div id="weatherCard">
+      <h3>location</h3>
+      <h4>tempNote</h4>
+      <h3>temperature</h3>
+      <h4>feelsNote</h4>
+      <h3>feelsLike</h3>
+      <h4>maxNote</h4>
+      <h3>tempMax</h3>
+      <h4>minNote</h4>
+      <h3>tempMin</h3>
+      <h4>HumidityNote</h4>
+      <h3>humidity</h3>
+    </div>
+  </body>
+  <script src="weather.js"></script>
+</html>

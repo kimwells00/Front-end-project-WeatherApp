@@ -4,7 +4,45 @@
   background-repeat: no-repeat;
   height: 100vh;
 }
+@media (min-width: 100px) and (max-width: 768px) {
+  #weatherBody {
+    background-image: none;
+    background-color: aliceblue;
+  }
+}
+#newsBody {
+  background-image: url("https://images.unsplash.com/photo-1588773846628-13fce0a32105?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
+}
+@media (min-width: 100px) and (max-width: 768px) {
+  #newsBody {
+    background-image: none;
+    background-color: grey;
+  }
+}
+
 #header {
+  background-color: #c8c5c5;
+  border-radius: 10px;
+  opacity: 0.7;
+  font-style: oblique;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin: 20px;
+}
+#inputField {
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+#weeklyHeader {
   font-style: oblique;
   font-size: larger;
   display: flex;
@@ -12,16 +50,53 @@
   align-items: center;
   flex-wrap: wrap;
 }
-#inputField {
-  padding: 20px;
+#weatherCard {
+  padding: 40px;
   border: 2px solid cornsilk;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#weeklyWeatherCard {
+  padding: 40px;
+  border: 2px solid cornsilk;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#weeklyInput {
+  padding: 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
-#weatherCard {
+#headline {
+  background-color: #c8c5c5;
+  opacity: 0.7;
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: larger;
+  font-weight: 500;
+  font-style: oblique;
+}
+#newsCard {
+  background-color: #c8c5c5;
   padding: 40px;
   border: 2px solid black;
   display: flex;
@@ -30,18 +105,114 @@
   flex-wrap: wrap;
   gap: 20px;
 }
-
-#newsCard {
-  padding: 40px;
-  border: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+@media (min-width: 100px) and (max-width: 768px) {
+  #newsCard {
+    display: list-item;
+  }
 }
 
 #newsImage {
-  height: 20px;
-  width: 20px;
+  height: 10%;
+  width: 10%;
+}
+@media (min-width: 100px) and (max-width: 768px) {
+  #newsImage {
+    display: flex;
+  }
+}
+
+#aboutMeBody {
+  background-image: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+#aboutHeader {
+  background-color: azure;
+  opacity: 0.7;
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#aboutMeParagraph {
+  background-color: azure;
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#contactBody {
+  background-image: url("https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+@media (min-width: 100px) and (max-width: 768px) {
+  #contactBody {
+    background-image: none;
+    background-color: pink;
+  }
+}
+#contactHeader {
+  background-color: azure;
+  opacity: 0.7;
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#infoBody {
+  margin-top: 75px;
+  padding-left: 200px;
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (min-width: 100px) and (max-width: 768px) {
+  #infoBody {
+    display: list-item;
+    padding-left: 50px;
+  }
+}
+#newsPageButton {
+  background-color: white;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 12px;
+}
+#weatherPageButton {
+  background-color: white;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 12px;
+}
+#creatorPageButton {
+  background-color: white;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 12px;
+}
+#contactPageButton {
+  background-color: white;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 12px;
 }

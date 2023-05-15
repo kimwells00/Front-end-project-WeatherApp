@@ -1,9 +1,5 @@
 const searchButton = document.querySelector("#searchButton");
 searchButton.addEventListener("click", () => returnWeather());
-const celciusCheckBox = document.querySelector("#celcius");
-const fahrenheitCheckBox = document.querySelector("#fahrenheit");
-
-function getUnits() {}
 
 async function returnWeather() {
   const searchBox = document.querySelector("#searchBox").value;
@@ -53,3 +49,30 @@ async function returnWeather() {
   getInfo(info);
 }
 returnWeather();
+
+const weeklySearchButton = document.querySelector("#weeklySearchButton");
+weeklySearchButton.addEventListener("click", () => weeklyWeather());
+
+async function weeklyWeather() {
+  const weeklySearchBox = document.querySelector("#weeklySearchBox").value;
+  const weeklyWeatherResults = await fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?q=${weeklySearchBox}&appid=87bda22374e78c24f3a9dfc0e0fc9bf9&units=imperial`
+  );
+
+  const json = await weeklyWeatherResults.json();
+  const stats = json.list;
+  const weeklyWeatherCard = document.getElementById("weeklyWeatherCard");
+
+  function getStats(stats) {
+    for (let i = 0; i < 7; i++) {
+      console.log(stats[i].main);
+      const div = document.getElementById("weekDiv");
+      const temperature = document.createElement("h3");
+      temperature.innerHTML = stats[i].main.temp;
+      div.append(temperature);
+      weeklyWeatherCard.append(div);
+    }
+  }
+  getStats(stats);
+}
+weeklyWeather();

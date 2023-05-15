@@ -21,6 +21,8 @@ async function returnNews() {
       description.innerHTML = news.description;
       title.innerHTML = news.title;
       url.innerHTML = news.url;
+      url.setAttribute("href", news.url);
+
       image.src = news.urlToImage;
 
       div.append(author, description, title, url, image);
